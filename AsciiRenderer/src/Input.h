@@ -1,5 +1,7 @@
 #pragma once
 #include <Windows.h>
+#include "Render.h"
+#include "Player.h"
 
 // The constants for each of these keys come from
 // the Windows.h header.
@@ -20,3 +22,4 @@ struct KeyPress
 };
 
 KeyPress keyDown(int keyCode);
+void playerInput(const Buffer& buf, Player& player);

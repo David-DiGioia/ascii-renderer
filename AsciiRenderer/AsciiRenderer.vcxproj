@@ -125,9 +125,13 @@
   <ItemGroup>
     <ClCompile Include="src\Input.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\Render.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Input.h" />
+    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\Render.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

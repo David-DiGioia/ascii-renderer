@@ -12,3 +12,15 @@ KeyPress keyDown(int keyCode)
 	result.consecutiveDown = key && 1;
 	return result;
 }
+
+void playerInput(const Buffer& buf, Player& player)
+{
+	if (keyDown(KEY_W).keyDown)
+		player.move(buf, Direction::UP);
+	if (keyDown(KEY_A).keyDown)
+		player.move(buf, Direction::LEFT);
+	if (keyDown(KEY_S).keyDown)
+		player.move(buf, Direction::DOWN);
+	if (keyDown(KEY_D).keyDown)
+		player.move(buf, Direction::RIGHT);
+}
