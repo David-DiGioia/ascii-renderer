@@ -3,6 +3,8 @@
 #include "Render.h"
 #include "Player.h"
 
+// A Test Comment
+
 // width and height (in characters) of buffer
 constexpr unsigned WIDTH{ 80 };
 constexpr unsigned HEIGHT{ 20 };
