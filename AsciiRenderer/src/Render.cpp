@@ -1,10 +1,12 @@
 #include "Render.h"
 #include <cstdio>
+#include <Windows.h>
 
 void draw(const Buffer& buf)
 {
-	// clear console
-	system("cls");
+	// reset cursor to top right
+	static const auto hOut{ GetStdHandle(STD_OUTPUT_HANDLE) };
+	SetConsoleCursorPosition(hOut, { 0, 0 });
 	printf(buf.m_data);
 }
 
