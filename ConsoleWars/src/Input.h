@@ -1,5 +1,6 @@
 #pragma once
 #include <Windows.h>
+#include <queue>
 #include "Render.h"
 #include "Player.h"
 
@@ -14,6 +15,8 @@ constexpr int KEY_W{ 0x57 };
 constexpr int KEY_A{ 0x41 };
 constexpr int KEY_S{ 0x53 };
 constexpr int KEY_D{ 0x44 };
+constexpr int KEY_SPACE{ VK_SPACE };
+constexpr int KEY_F{ 0x46 };
 
 struct KeyPress
 {
@@ -22,4 +25,6 @@ struct KeyPress
 };
 
 KeyPress keyDown(int keyCode);
-void playerInput(const Buffer& buf, Player& player);
+void localInput(std::queue<PlayerInput>& inputs, int id);
+
+void processInputs(std::queue<PlayerInput>& inputs, std::vector<Player>& players, std::vector<Bullet>& bullets, Buffer& buf);
